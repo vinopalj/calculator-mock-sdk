@@ -1,9 +1,11 @@
 type CallbackFunction = (response: TrianglCalculatorResponse) => void;
+type ErrorCallbackFunction = (error?:Error) => void;
 
 
 // options for Triangl calculator - render options for Triangl calculator
 interface TrianglCalculatorOptions {
     callback?: CallbackFunction;
+    errorCallback?: ErrorCallbackFunction;
     apiKey?: string; // API key for Triangl calculator
     type?: string;  // detail | cart
     products?: string[]; // list of products of financials providers
